@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<div class="nav">
+    <button onclick="showSection('bmi')">BMI Calculator</button>
+    <button onclick="showSection('about')">About</button>
+</div>
+
+<!-- BMI SECTION -->
+<div id="bmi" class="container">
+    <h1>BMI Calculator</h1>
+
+    <label>Select Unit:</label>
+    <select id="unit" onchange="changeUnit()">
+        <option value="metric">CM / KG</option>
+        <option value="imperial">Feet / Pounds</option>
+    </select>
+
+   <div id="heightContainer">
+    <label>Height (cm):</label>
+    <input type="number" id="height">
+  </div>
+
+    <label id="weightLabel">Weight (kg):</label>
+    <input type="number" id="weight">
+
+    <button onclick="calculateBMI()">Calculate BMI</button>
+
+    <h2 id="result"></h2>
+    <p id="category"></p>
+    <p id="tips"></p>
+</div>
+
+<!-- ABOUT SECTION -->
+<div id="about" class="container" style="display:none;">
+    <h1>About This Project</h1>
+
+    <p><strong>Made by</strong>Tanmay Rana</p>
+    <p><strong>Project:</strong> BMI Calculator</p>
+    <p><strong>Course:</strong> B.E CSE</p>
+    <p><strong>College:</strong>Chitkara University</p>
+  <h3>Project Description</h3>
+    <ul>
+    <li>Simple BMI Calculator web application using HTML, CSS, and JavaScript</li>
+    <li>Accepts height and weight input in metric and imperial units</li>
+    <li>Calculates BMI and displays result instantly</li>
+    <li>Categorizes result into Underweight, Normal, Overweight, and Obese</li>
+    <li>Provides basic health tips based on BMI category</li>
+    <li>Includes navigation to switch between Calculator and About section</li>
+  </ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
